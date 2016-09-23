@@ -149,7 +149,7 @@ please contact mla_licensing@microchip.com
 
 #define USB_CDC_SET_LINE_CODING_HANDLER USART_mySetLineCodingHandler
 
-#define USB_CDC_SUPPORT_HARDWARE_FLOW_CONTROL
+//#define USB_CDC_SUPPORT_HARDWARE_FLOW_CONTROL
 
 //Define the logic level for the "active" state.  Setting is only relevant if
 //the respective function is enabled.  Allowed options are:
