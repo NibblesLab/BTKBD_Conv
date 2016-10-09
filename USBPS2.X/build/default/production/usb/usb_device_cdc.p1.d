@@ -1,0 +1,19 @@
+ build/default/production/usb/usb_device_cdc.d  \
+ build/default/production/usb/usb_device_cdc.p1:  \
+ usb/usb_device_cdc.c  \
+usb/usb_hal.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_hal_pic18.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/bsp/buttons.h  \
+usb/usb_common.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/system.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/bsp/leds.h  \
+usb/usb_device_cdc.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/io_mapping.h  \
+usb/usb_ch9.h  \
+usb/usb_device.h  \
+usb/usb.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_hal.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_config.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/bsp/usart.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/fixed_address_memory.h  \
+usb/usb_config.h 

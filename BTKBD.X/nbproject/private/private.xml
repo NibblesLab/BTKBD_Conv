@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/ohishi/MPLABXProjects/BTKBD_Conv/BTKBD.X/sbxbt_hid_ms910/global.h</file>
+            <file>file:/Users/ohishi/MPLABXProjects/BTKBD_Conv/BTKBD.X/sbxbt_hid_ms910/btstack/hci_transport_picusb.c</file>
+            <file>file:/Users/ohishi/MPLABXProjects/BTKBD_Conv/BTKBD.X/sbxbt_hid_ms910/btstack/hci_cmds.h</file>
+            <file>file:/Users/ohishi/MPLABXProjects/BTKBD_Conv/BTKBD.X/sbxbt_hid_ms910/btstack/hci_cmds.c</file>
+            <file>file:/Users/ohishi/MPLABXProjects/BTKBD_Conv/BTKBD.X/sbxbt_hid_ms910/btstack/hci.c</file>
+            <file>file:/Users/ohishi/MPLABXProjects/BTKBD_Conv/BTKBD.X/sbxbt_hid_ms910/main.c</file>
+            <file>file:/Users/ohishi/MPLABXProjects/BTKBD_Conv/BTKBD.X/sbxbt_hid_ms910/btstack/run_loop.c</file>
+        </group>
+    </open-files>
+</project-private>

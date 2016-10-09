@@ -1,0 +1,22 @@
+ build/default/production/usb/usb_events.d  \
+ build/default/production/usb/usb_events.p1:  \
+ usb/usb_events.c  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_hal_pic18.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_common.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/bsp/buttons.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_ch9.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/system.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/bsp/leds.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_device_cdc.h  \
+usb/usb_device_cdc.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_device.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/io_mapping.h  \
+usb/usb_device.h  \
+usb/usb.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/app_device_cdc_to_uart.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_hal.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/app_led_usb_status.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/usb/usb_config.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/bsp/usart.h  \
+/Users/ohishi/MPLABXProjects/BTKBD_Conv/USBPS2.X/fixed_address_memory.h 
