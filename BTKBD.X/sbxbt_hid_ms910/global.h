@@ -8,7 +8,7 @@
 #include "timer.h"
 #include "xprintf.h"
 
-#define PIN_CODE_DEFAULT	"1234"
+#define PIN_CODE_DEFAULT	"0000"
 #define BOARD_SBDBT         1
 #define BOARD_SBXBT         0
 #define	BOARD_SBRBT			0
@@ -146,6 +146,14 @@
 #define	u1rts_setup()		(TRISCbits.TRISC9=0)
 #define	u1rts_on()			(LATCbits.LATC9=0)	//ON:rx ready
 #define	u1rts_off()			(LATCbits.LATC9=1)	//OFF:rx not ready
+
+// SPI Master
+// Configure SCK1 - put on pin 5 (RP25)
+#define sck1_setup()		(RPOR12bits.RP25R = 8)
+// Configure SDO1(MOSI) - put on pin 2 (RP22)
+#define sdo1_setup()		(RPOR11bits.RP22R = 7)
+// Configure SDI1(MISO) - put on pin 3 (RP23)
+#define	sdi1_setup()		(RPINR20bits.SDI1R = 23)
 
 #if	STO_SERIAL
 // Configure console OUT(U2TX) - put on pin 1 (RP9)

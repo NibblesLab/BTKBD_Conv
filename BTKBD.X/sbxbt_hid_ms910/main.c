@@ -1,3 +1,5 @@
+#define __DEBUG 1
+
 #include <stdlib.h>
 #define USE_AND_OR /* To enable AND_OR mask setting */
 #include<ports.h>
@@ -416,8 +418,10 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 	static	uint16_t handle=0;
 	static	uint8_t	encryption_mode_set=0;
     
+//	log_info("packet type:%02x\r\n",packet_type);
 	switch (packet_type) {
 		case HCI_EVENT_PACKET:
+//          log_info("response:%02x\r\n",packet[0]);
 			switch (packet[0]) {
 				case BTSTACK_EVENT_STATE:
 					// bt stack activated, get started - set local name
@@ -459,6 +463,7 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
                     }
 					if (COMMAND_COMPLETE_EVENT(packet, hci_set_event_filter)){
 						hci_send_cmd(&hci_set_event_mask,0xfffbffffLU,0x1dbff807LU);
+//						hci_send_cmd(&hci_set_event_mask,0xfffbffffLU,0x1d9ff807LU);    // disable SSP event
 					}else
 					if (COMMAND_COMPLETE_EVENT(packet, hci_set_event_mask)){
 						hci_send_cmd(&hci_write_default_link_policy_settings,0x000f);
@@ -471,7 +476,7 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 reconnect:
 						if(mode_pairing){		//ペアリングモード
 							log_info("Inquiry\n");
-							hci_send_cmd(&hci_inquiry, HCI_INQUIRY_LAP, INQUIRY_INTERVAL, 0);
+							hci_send_cmd(&hci_inquiry, HCI_INQUIRY_LAP, INQUIRY_INTERVAL, 1);
 						}
                         break;
 					}
@@ -517,11 +522,12 @@ reconnect:
 					}
 
 #if	1
+                    log_info("packet[12]:%02x packet[13]:%02x packet[14]:%02x\r\n",packet[12],packet[13],packet[14]);
 					// ignore not MS910
 					if(
 //						!(packet[12]==0x00 && packet[13]==0x1F && packet[14]==0x00)	//SPP MODE
-//						!(packet[12]==0x40 && packet[13]==0x05 && packet[14]==0x00)	//HID MODE
-						!(packet[12]==0x80 && packet[13]==0x05 && packet[14]==0x00)	//windows no PIN CODE MODE
+						!(packet[12]==0x40 && (packet[13]&0x1f)==0x05 && packet[14]==0x00)	//HID MODE
+//						!(packet[12]==0x80 && packet[13]==0x05 && packet[14]==0x00)	//windows no PIN CODE MODE
 					){
 						break;
 					}
@@ -541,8 +547,10 @@ reconnect:
 					break;
 					
 				case HCI_EVENT_INQUIRY_COMPLETE:
-					log_info("can't find Reader\n");
-					goto reconnect;
+					if (!foundReader){
+						log_info("can't find Reader\n");
+						goto reconnect;
+					}
 					break;
 
 				case HCI_EVENT_LINK_KEY_REQUEST:
