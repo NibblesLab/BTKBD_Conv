@@ -31,3 +31,11 @@
 # Debug files
 *.dSYM/
 *.su
+/sbxbt_hid_ms910.X/nbproject/private/
+/BTKBD.X/nbproject/private/
+/sbxbt_hid_ms910/nbproject/private/
+/BTKBD.X/build/default/
+/BTKBD.X/dist/default/
+/USBPS2.X/nbproject/private/
+/USBPS2.X/build/default/
+/USBPS2.X/dist/default/
